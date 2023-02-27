@@ -28,6 +28,7 @@
 
 .top-nav{
   display: block;
+  pointer-events: none;
 }
 
 .navbarItems{
