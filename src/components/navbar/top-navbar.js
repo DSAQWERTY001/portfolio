@@ -1,30 +1,29 @@
 import React from "react";
-import "../../style/cursor.css"
+import "./top-nav.css"
 // import { Icons } from '@components/icons'
 import Icons  from "../icons/about";
 import { motion } from 'framer-motion';
 import { useState } from "react";
-import {useVariantMousePosition,CursorVariant} from "../../assert/hooks/variantMousePosition.js"
+import {useVariantMousePosition,useCursorVariant} from "../../assert/hooks/variantMousePosition.js"
 
 
 function Topnavbar(){
     const useVariantMousePositions = useVariantMousePosition();
-    const { cursorVariant,textEnter, textLeave ,link} = CursorVariant();
+    const {linkEnter ,linkLeave} = useCursorVariant();
     return(
-        <nav className="navbarItems">
-            <motion.nav className='cursor' variants={useVariantMousePositions} animate={cursorVariant}/>
+        <div className="top-nav">
+            <nav className="navbarItems">
             <div style={{textAlign:"center"}}>
                 <h1></h1>
             </div>
             <div style={{textAlign:"center"}}>
                 <ul className="nav-table">
                     <li className="link-nav" >
-                        <a href="" onMouseEnter={link} onMouseLeave={textLeave}>
+                        <a href="" onMouseEnter={linkEnter} onMouseLeave={linkLeave}>
                              Home
-                        </a>
-                    
+                        </a>   
                     </li>
-                    <li className="link-nav" onMouseEnter={link} onMouseLeave={textLeave}>
+                    <li className="link-nav" onMouseEnter={linkEnter} onMouseLeave={linkLeave}>
                     <a href="">
                         <Icons/>
                         About
@@ -33,6 +32,8 @@ function Topnavbar(){
                 </ul>
             </div>    
         </nav>
+        </div>
+        
     );
 }
 
