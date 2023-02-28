@@ -14,7 +14,7 @@ function Topnavbar(){
         <div className="top-nav">
             <nav className="navbarItems">
             <div style={{textAlign:"center"}}>
-                <h1></h1>
+                <h1><Icons.main/></h1>
             </div>
             <div style={{textAlign:"center"}}>
                 <ul className="nav-table">
@@ -25,7 +25,7 @@ function Topnavbar(){
                     </li>
                     <li className="link-nav" onMouseEnter={linkEnter} onMouseLeave={linkLeave}>
                     <a href="">
-                        <Icons/>
+                        <Icons.about/>
                         About
                     </a>
                     </li>
