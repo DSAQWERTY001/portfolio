@@ -1,22 +1,24 @@
 import React from "react";
 import "./style/App.css"
+import "./style/cursor.css"
+import "./components/navbar/top-nav.css"
+import { motion } from 'framer-motion';
 import Cursor from "./components/cursor/cursor";
-import useMousePosition from "./assert/hooks/useMousePosition";
-import Footer from "./components/footer/footer";
-import { useState } from "react";
+import {useVariantMousePosition,useCursorVariant} from "./assert/hooks/variantMousePosition"
+import Topnavbar from "./components/navbar/top-navbar";
 
 function App() {
-
-  const mousePosition = useMousePosition()
-  
-    
-  
+  const useVariantMousePositions = useVariantMousePosition();
+  const { cursorVariant} = useCursorVariant();
+  console.log(cursorVariant)
   return (
-    
-    <div>
-      <div>TEST</div>
+    <div className="App">
+      
+        <div className="top-nav">
+            <Topnavbar/>
+        </div>
       <Cursor/>
-      <Footer/>
+      <motion.div className='cursor' initial={{ opacity: 1 }} variants={useVariantMousePositions} animate={cursorVariant}/>
     </div>
   );
 }
