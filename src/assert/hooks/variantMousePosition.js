@@ -35,10 +35,8 @@ function useVariantMousePosition(){
 
 const CursorVariantContext = createContext();
 
-// Define a custom hook to access the global cursor variant state
 const useCursorVariant = () => useContext(CursorVariantContext);
 
-// Define a provider component that provides the global cursor variant state to the component tree
 const CursorVariantProvider = ({ children }) => {
   const [cursorVariant, setCursorVariant] = useState("default");
   const textEnter = () => setCursorVariant("text");
@@ -46,7 +44,6 @@ const CursorVariantProvider = ({ children }) => {
   const linkEnter = () => setCursorVariant("pointer");
   const linkLeave = () => setCursorVariant("default");
 
-  // Define the global cursor variant state object and the functions to modify it
   const globalCursorVariantState = {
     cursorVariant,
     textEnter,
@@ -55,7 +52,6 @@ const CursorVariantProvider = ({ children }) => {
     linkLeave,
   };
 
-  // Provide the global cursor variant state to the component tree using the Provider component
   return (
     <CursorVariantContext.Provider value={globalCursorVariantState}>
       {children}

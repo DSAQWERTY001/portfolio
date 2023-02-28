@@ -1,5 +1,4 @@
 module.exports = {
-
     socailMedia : [
         {
             name:'Github',

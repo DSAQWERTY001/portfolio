@@ -15,7 +15,7 @@ function App() {
     <div className="App">
       
         <div className="top-nav">
-            <Topnavbar setCursor={cursorVariant}/>
+            <Topnavbar/>
         </div>
       <Cursor/>
       <motion.div className='cursor' initial={{ opacity: 1 }} variants={useVariantMousePositions} animate={cursorVariant}/>

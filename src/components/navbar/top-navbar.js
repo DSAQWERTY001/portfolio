@@ -1,5 +1,5 @@
 import React from "react";
-import "./top-nav.css"
+import "./top-navbar.css"
 // import { Icons } from '@components/icons'
 import Icons  from "../icons/about";
 import { motion } from 'framer-motion';

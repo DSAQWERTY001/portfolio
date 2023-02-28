@@ -1,13 +1,9 @@
 import React from "react";
-import Topnavbar from "../navbar/top-navbar.js";
-import { motion } from 'framer-motion';
 import "../../style/cursor.css"
 import {useVariantMousePosition,useCursorVariant} from "../../assert/hooks/variantMousePosition.js"
 
 function Cursor(){
 
-
-  const useVariantMousePositions = useVariantMousePosition();
   const {textEnter, textLeave } = useCursorVariant();
   
     return (
