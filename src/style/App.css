@@ -6,22 +6,10 @@
   display: grid;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  background-color: yellow;
+  background-color: #fff;
 }
 
 .title {
   font-size: 10rem;
   color: blue;
-}
-
-.cursor {
-  background-color: blue;
-  height: 32px;
-  width: 32px;
-  border-radius: 50%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
 }

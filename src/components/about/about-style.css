@@ -1,0 +1,15 @@
+.about-me {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.about-me img {
+    width: 45%;
+    border-radius : 3rem;
+}
+
+.title-about {
+    padding-bottom: 2rem;
+    display: grid;
+    text-align: center;
+}

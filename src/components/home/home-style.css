@@ -1,0 +1,29 @@
+* {
+  cursor: none;
+}
+  
+
+.title-home {
+  font-size: 10rem;
+  color: black  ;
+}
+  
+.cursor {
+  background-color: black;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 3;
+}
+
+@media only screen and (max-width:900px) {
+  .title-home{
+    font-size: 8rem;
+    text-align: center;
+  }
+  
+}

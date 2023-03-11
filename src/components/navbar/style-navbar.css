@@ -1,0 +1,113 @@
+.top-nav {
+  display: block;
+}
+
+.navbarItems {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+}
+
+.navbarItems svg {
+  fill: none;
+  stroke: black;
+}
+
+.navbarItems ul svg {
+  width: 17px;
+}
+
+.nav-table {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 20px;
+  list-style-type: none;
+}
+
+.link-nav a {
+  color: black;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  padding: 15px 5px;
+  position: relative;
+}
+
+
+
+.link-nav a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  transform-origin: bottom middle;
+  transition: transform 0.25s ease-out;
+}
+
+.link-nav a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom middle;
+  /* color: black;
+    text-decoration: underline;
+    text-shadow:0px 0px 30px blue;
+    -moz-transition: all 0.2s ease-in;
+    -o-transition: all 0.2s ease-in;
+    -webkit-transition: all 0.2s ease-in;
+    transition: all 0.2s ease-in; */
+}
+
+.botton-nav {
+  background: rgba(0, 0, 0, 0.3);
+  width: max-content;
+  display: block;
+  padding: 0.7rem 1.7rem;
+  z-index: 2;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 2rem;
+  display: flex;
+  gap: 0.8rem;
+  border-radius: 3rem;
+  backdrop-filter: blur(15px);
+  /* align-self: flex-end; */
+  align-items: center;
+  color: black;
+}
+
+.botton-nav svg {
+  fill: none;
+  stroke: black;
+  width: 22px;
+}
+
+.botton-nav a {
+  background: transparent;
+  padding: 0.9rem;
+  border-radius: 50%;
+  display: flex;
+  color: black;
+  font-size: 1.1rem;
+}
+
+.botton-nav a:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.botton-nav a:hover svg {
+  stroke: #fff;
+}
+
+.botton-nav a.active {
+  background: #fff;
+}
+
+.botton-nav a.active svg{
+  background: #fff;
+  stroke: black;
+}

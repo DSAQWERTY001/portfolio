@@ -1,61 +1,45 @@
 import React from "react";
 import "./footer.css"
-import { motion } from 'framer-motion';
-import cursorVariant from "../../assert/hooks/cursorMouseState";
-import Icons from "../icons/returnIcon";
+import Icons from "../../assert/icons/returnIcon";
+import { useCursorVariant } from "../../assert/hooks/variantMousePosition.js"
 
-export default function(){
-    const cursorMouseState = cursorVariant()
-    
+export default function () {
+  const { footerlink, linkLeave, footertitle, textLeave } = useCursorVariant();
+  return (
+    <footer>
+      <h1 onMouseEnter={footertitle} onMouseLeave={textLeave} className="footer-title">
+        PORTFOLIO FOOTER
+      </h1>
 
-    const textEnter = () => cursorMouseState.setCursorVariant("text");
-    const textLeave = () => cursorMouseState.setCursorVariant("default");
-    const navEnter = () => cursorMouseState.setCursorVariant("nav");
-    return (
-        <footer>
-      <a href="" className="footer__logo">
-        MANOHAR
-      </a>
-
-      <ul className="permalinks" onMouseEnter={navEnter} onMouseLeave={textLeave}>
-        <li>
+      <ul className="links">
+        <li onMouseEnter={footerlink} onMouseLeave={linkLeave}>
           <a href="#">Home</a>
         </li>
-        <li>
+        <li onMouseEnter={footerlink} onMouseLeave={linkLeave}>
           <a href="#about">About</a>
         </li>
-        <li>
-          <a href="#experience">Experience</a>
+        <li onMouseEnter={footerlink} onMouseLeave={linkLeave}>
+          <a href="#skills">Skills</a>
         </li>
-        <li>
-          <a href="#services">Services</a>
-        </li>
-        <li>
-          <a href="#portfolio">Portfolio</a>
-        </li>
-        <li>
-          <a href="#testimonials">Testimonials</a>
-        </li>
-        <li>
+        <li onMouseEnter={footerlink} onMouseLeave={linkLeave}>
           <a href="#contacts">Contacts</a>
         </li>
       </ul>
 
-      <div className="footer__socials">
-        <a href="https::/facebook.com">
-          <Icons.facebook/>
+      <div className="footer-socials" >
+        <a href="https::/facebook.com" onMouseEnter={footerlink} onMouseLeave={linkLeave}>
+          <Icons.facebook />
         </a>
-        <a href="https::/github.com">
+        <a href="https::/github.com" onMouseEnter={footerlink} onMouseLeave={linkLeave}>
           <Icons.github />
         </a>
       </div>
 
-      <div className="footer__copyright">
-        <small>&copy; Manu All rights reserved</small>
+      <div className="footer-copyright">
+        <small>&copy; Copy right</small>
       </div>
-      <motion.div className='cursor' variants={cursorMouseState.variants} animate={cursorVariant}/>
     </footer>
-    
-    );
+
+  );
 
 }
