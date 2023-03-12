@@ -11,9 +11,7 @@ const Topnavbar = () => {
             <nav className="navbarItems">
                 <div style={{ textAlign: "center" }} onMouseEnter={linkEnter} onMouseLeave={linkLeave}>
                     <h1><Icons.main /></h1>
-                </div>
-                <div className="menu-nav"></div>
-                    <i className="fas fa-bars"></i>
+                </div>        
                 <div style={{ textAlign: "center" }}>
                     <ul className="nav-table">
                         <li className="link-nav" >

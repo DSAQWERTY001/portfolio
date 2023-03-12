@@ -111,3 +111,9 @@
   background: #fff;
   stroke: black;
 }
+
+@media only screen and (max-width:492px) {
+  .navbarItems{
+    display: block;
+  }
+}
