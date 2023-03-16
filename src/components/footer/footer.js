@@ -27,10 +27,10 @@ export default function () {
       </ul>
 
       <div className="footer-socials" >
-        <a href="https::/facebook.com" onMouseEnter={footerlink} onMouseLeave={linkLeave}>
+        <a href="https://facebook.com" onMouseEnter={footerlink} onMouseLeave={linkLeave}>
           <Icons.facebook />
         </a>
-        <a href="https::/github.com" onMouseEnter={footerlink} onMouseLeave={linkLeave}>
+        <a href="https://github.com" onMouseEnter={footerlink} onMouseLeave={linkLeave}>
           <Icons.github />
         </a>
       </div>
