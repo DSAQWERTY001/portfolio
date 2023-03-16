@@ -1,5 +1,6 @@
 .about-me {
     padding-bottom: 2rem;
+    margin: 0 10px 0 0px;
 }
 
 .about-me img {
@@ -12,8 +13,10 @@
 }
 .about-me-container {
     display:flex;
-
+    width: 900px;
 }
 .about-me-content {
-    text-align: center;
+    justify-content: end;
+    width: 400px;
+    font-size: 1rem;
 }

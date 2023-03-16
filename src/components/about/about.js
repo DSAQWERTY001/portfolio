@@ -11,6 +11,8 @@ const About = () => {
     const getStyle = () => {
         return {
             textAlign: show ? 'start' : 'center',
+            display: 'flex',
+            width: show ? '400px' : 'auto'
         };
     };
 
@@ -21,10 +23,20 @@ const About = () => {
             </div>
             <div className="about-me-container">
                 <div className="about-me" style={getStyle()}>
-                    <img src={Profile} onClick={showProfile} alt="Profile" style={{ width: show ? '25%' : '45%' }} />
-                    <div className="about-me-content" style={{ display: show ? 'flex' : 'none' }}>
-                        Test
+                    <div>
+                        <img src={Profile} onClick={showProfile} alt="Profile" style={{ width: show ? '75%' : '45%', textAlign: show ? 'start' : 'center' }} />
                     </div>
+
+                </div>
+                <div className="about-me-content" style={{ display: show ? 'flex' : 'none' }}>
+                    <br/>
+                    Teerapong Boontool<br/><br/>
+                    Education 
+                    <br/>&nbsp;&nbsp;&nbsp;- KING MONGKUT'S UNIVERSITY OF TECHNOLOGY <br/>NORTH BANGKOK
+                    <br/>&nbsp;&nbsp;&nbsp;- College of Industrial Technology
+                    <br/>&nbsp;&nbsp;&nbsp;- Department of Electronics Engineering Technology
+                    <br/>&nbsp;&nbsp;&nbsp;- GPA 3.02
+                    <br/> &nbsp;&nbsp;&nbsp;- SINCE : 2019 - now
                 </div>
 
             </div>
